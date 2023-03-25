@@ -1,0 +1,18 @@
+sphinx:
+  project:
+    name: "Biblioteca V2"      # Nome do Projeto
+    copyright: "2021, Via S.A"     # Copyright
+    author: "Felipe Sakatauskas"   # Nome do Autor
+  confluence:
+    publish: true                  # Quando 'True' ira fazer a publicação do documento
+                                   # Quando 'False' ira fazer todos os processos porem não envia ao Confluence
+    space:
+      name: '~2105041759'       # Nome do Espaço onde será distribuida a documentação
+                                          # Quando for um Espaço Pessoal deve se utilizar a key de referencia
+                                          # Clicando no Icone do Usuario -> Espaço pessoal
+                                          # Copiar o viewspace.action?key=(xxxxx) 
+                                          # Onde (xxxxxx) e sua chave de espaço (incluir tambem o ~)
+    url: 'http://confluence.viavarejo.com.br/' # Servidor do Confluence onde sera feita a publicação
+    parent_page: 'Pagina de Suporte' # Configura qual pagina sera o suporte para colocar a documentação
+                                                # Se estiver em branco, sera colocada na Raiz do Espaço
+                                                # Eh necessario que a mesma esteja criada para ser utilizada

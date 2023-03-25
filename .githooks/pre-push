@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export GIT_HOOK_EVENT=$(basename $0)
+
+HOOK_DIR=$(dirname $0)
+source $HOOK_DIR/init

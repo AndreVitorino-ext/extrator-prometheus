@@ -1,0 +1,20 @@
+#!/bin/sh -l
+SPHINX_DIR=".event.d/sphinx/"
+ 
+# install requirements.txt if it exists
+if [ -f requirements.txt ]; then
+  pip install --user -r requirements.txt
+fi
+
+if ! [ -z "$INPUT_DOCSDIR" ]; then
+  cd $INPUT_DOCSDIR
+fi
+ 
+# Bundle all Files
+mkdir -p /tmp/Bundle && cd /tmp/Bundle
+cp -rf "/.$/$SPHINX_DIR/"* .
+cp -rf "/.$/docs/"* .
+
+make confluence \
+  SPHINXOPTS="-D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN"
+
