@@ -1,4 +1,3 @@
-Bem vindo ao Publish-Confluence Demo!
+Extrator de dados Prometheus
 =========================================
 
-Sua documentação comeca [aqui](docs/README.md)
